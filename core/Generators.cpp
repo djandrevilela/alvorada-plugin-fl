@@ -99,7 +99,7 @@ std::vector<GenNote> generateMelody(const Scale& sc, const std::vector<ChordSpan
         const Chord& ch = *chordAt(spans, n.start);
         auto mask = maskOf(ch);
         const double u = std::fmod(n.start, phraseLen) / phraseLen;
-        const double tgt = mid + d * (u - 0.5) * range * 0.9 + (1.0 - std::abs(d)) * (std::sin(M_PI * u) - 0.5) * range * 0.3;
+        const double tgt = mid + d * (u - 0.5) * range * 0.9 + (1.0 - std::abs(d)) * (std::sin(3.14159265358979323846 * u) - 0.5) * range * 0.3;
         double best = -1e9;
         int bestP = lo;
         for (int m = lo; m <= hi; ++m) {
